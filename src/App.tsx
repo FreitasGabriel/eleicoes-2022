@@ -28,6 +28,10 @@ function App() {
     setVotos(result.data.cand);
   };
 
+  const convertQtd = (qtd: string) => {
+    return parseInt(qtd).toLocaleString("pt-BR");
+  };
+
   return (
     <Container>
       <thead>
@@ -42,7 +46,7 @@ function App() {
         {votos.map((cand, idx) => (
           <tr key={`tr-${idx}`}>
             <td key={`name-${idx}`}>{cand.nm}</td>
-            <td key={`qtd-${idx}`}>{cand.vap}</td>
+            <td key={`qtd-${idx}`}>{convertQtd(cand.vap)}</td>
             <td key={`pct-${idx}`}>{cand.pvap}</td>
           </tr>
         ))}
