@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.table`
 
-    border: 1px solid #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-    th, td{
-        border: 1px solid #000000;
-    }
-    align-items: center;
+    flex-wrap: wrap;
 
 `
