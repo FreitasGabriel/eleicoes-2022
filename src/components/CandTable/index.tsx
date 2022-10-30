@@ -23,11 +23,11 @@ export const CandTable = ({ c, title }: TableProps) => {
         <tbody>
           {c.map((cand, idx) => (
             <tr key={`tr-${idx}`}>
-              <td key={`name-${idx}`}>{cand.nc}</td>
+              <td key={`name-${idx}`}>{cand.nm}</td>
               <td key={`qtd-${idx}`}>
-                {parseInt(cand.v).toLocaleString("pt-BR")}
+                {parseInt(cand.vap).toLocaleString("pt-BR")}
               </td>
-              <td key={`pct-${idx}`}>{cand.vp}</td>
+              <td key={`pct-${idx}`}>{cand.pvap}</td>
             </tr>
           ))}
         </tbody>

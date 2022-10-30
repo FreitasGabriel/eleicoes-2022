@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   const getInfo = async () => {
-    const pres = await axios.get<Candidatos>(constants.URL_PRES, {
+    const pres = await axios.get<Candidatos>(constants.URL, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -25,7 +25,7 @@ function App() {
     // const gov = await axios.get<Candidatos>(constants.URL_GOV_RJ);
     // const sen = await axios.get<Candidatos>(constants.URL_SEN_RJ);
     console.log("pres", pres);
-    setPres(pres.data.c);
+    setPres(pres.data.cand);
     // setGov(gov.data.c);
     // setSen(sen.data.c);
   };

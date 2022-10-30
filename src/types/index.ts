@@ -1,9 +1,9 @@
 export interface Candidato {
-    nc: string;
-    vp: string;
-    v: string;
+    nm: string;
+    vap: string;
+    pvap: string;
   }
   
 export  interface Candidatos {
-    c: Candidato[];
+    cand: Candidato[];
   }
